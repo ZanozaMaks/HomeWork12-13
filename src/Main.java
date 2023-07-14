@@ -5,6 +5,8 @@ public class Main {
         Book book2 = new Book("Книга2", new Author("Михаил","Максимович"), 1970);
 
         book1.setPublicationYear(1965);
+        book2.setPublicationYear(1980);
+
 
         System.out.println(book1);
         System.out.println(book2);
