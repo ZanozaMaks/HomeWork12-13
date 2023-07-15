@@ -1,9 +1,15 @@
 import java.util.Objects;
 
-public class author {
+public class Author {
 
-    private String name;
+    private String name;    //поля
+
     private String sureName;
+
+    public Author(String name, String sureName) {
+        this.name = name;
+        this.sureName = sureName;
+    }
 
     public String getName() {
         return name;
@@ -21,16 +27,12 @@ public class author {
         this.sureName = sureName;
     }
 
-    public author(String name, String sureName) {
-        this.name = name;
-        this.sureName = sureName;
-    }
 
     public void eqs (boolean eqs) {
         if (!eqs) {
-            System.out.println("Авторы не равны");
+            System.out.println("Разные авторы");
         } else {
-            System.out.println("Авторы равны");
+            System.out.println("Один и тот же автор");
         }
     }
 
@@ -38,7 +40,7 @@ public class author {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        author author = (author) o;
+        Author author = (Author) o;
         return Objects.equals(name, author.name) && Objects.equals(sureName, author.sureName);
     }
 
