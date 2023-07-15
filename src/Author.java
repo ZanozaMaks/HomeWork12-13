@@ -2,14 +2,37 @@ import java.util.Objects;
 
 public class Author {
 
-    String name;
-    String sureName;
+    private String name;    //поля
+
+    private String sureName;
+
+    public Author(String name, String sureName) {
+        this.name = name;
+        this.sureName = sureName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSureName() {
+        return sureName;
+    }
+
+    public void setSureName(String sureName) {
+        this.sureName = sureName;
+    }
+
 
     public void eqs (boolean eqs) {
         if (!eqs) {
-            System.out.println("Авторы не равны");
+            System.out.println("Разные авторы");
         } else {
-            System.out.println("Авторы равны");
+            System.out.println("Один и тот же автор");
         }
     }
 
@@ -33,24 +56,4 @@ public class Author {
                 ", Фамилия: " + sureName + '\'';
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSureName() {
-        return sureName;
-    }
-
-    public void setSureName(String sureName) {
-        this.sureName = sureName;
-    }
-
-    public Author(String name, String sureName) {
-        this.name = name;
-        this.sureName = sureName;
-    }
 }

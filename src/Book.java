@@ -1,10 +1,10 @@
 import java.util.Objects;
 
 public class Book {
-    String nameBook;
-    Author fullName;
+    private String nameBook;
+    private Author fullName;
 
-    int publicationYear;
+    private int publicationYear;
 
     public Book(String nameBook, Author fullName, int publicationYear) {
         this.nameBook = nameBook;
