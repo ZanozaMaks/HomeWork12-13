@@ -1,12 +1,12 @@
 import java.util.Objects;
 
-public class Book {
-    String nameBook;
-    Author fullName;
+public class book {
+    private String nameBook;
+    private author fullName;
 
-    int publicationYear;
+    private int publicationYear;
 
-    public Book(String nameBook, Author fullName, int publicationYear) {
+    public book(String nameBook, author fullName, int publicationYear) {
         this.nameBook = nameBook;
         this.fullName = fullName;
         this.publicationYear = publicationYear;
@@ -28,11 +28,11 @@ public class Book {
         this.nameBook = nameBook;
     }
 
-    public Author getFullName() {
+    public author getFullName() {
         return fullName;
     }
 
-    public void setFullName(Author fullName) {
+    public void setFullName(author fullName) {
         this.fullName = fullName;
     }
 
@@ -44,7 +44,7 @@ public class Book {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
+        book book = (book) o;
         return publicationYear == book.publicationYear && Objects.equals(nameBook, book.nameBook) && Objects.equals(fullName, book.fullName);
     }
 
